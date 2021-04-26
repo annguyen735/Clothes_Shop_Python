@@ -36,6 +36,6 @@ class CustomUserAdmin(UserAdmin):
     # add_form = CustomUserCreationForm
     list_display = ('email', 'first_name', 'last_name', 'is_staff', 'is_active', 'is_superuser')
     search_fields = ('email', 'first_name', 'last_name')
-    ordering = ('email',)
+    ordering = ('date_joined',)
 
 admin.site.register(CustomUser, CustomUserAdmin)
