@@ -8,7 +8,8 @@ class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(_('Title'), max_length=254)
     description = models.TextField(_('description'))
-    date_joined = models.DateTimeField(_('create at'), default=timezone.now)
+    ratings_point = models.FloatField(_('Rating Point'), max_length=2, default=0.0)
+    create_at = models.DateTimeField(_('create at'), default=timezone.now)
 
     def __str__(self):
         return self.title
