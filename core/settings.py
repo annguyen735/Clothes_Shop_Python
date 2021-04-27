@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     # custom app
     'users',
     'posts',
-    'ratings'
+    'ratings',
+    'django_seed',
 ]
 
 MIDDLEWARE = [
